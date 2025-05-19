@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { getCurrentWebviewWindow } from "@tauri-apps/api/webviewWindow";
 import { LogicalSize } from "@tauri-apps/api/dpi";
 
-const Dashboard: React.FC = ({ children }: {children: React.ReactNode}) => {
+const Dashboard = () => {
   const {logout} = useAuth()
 
   useEffect(() => {

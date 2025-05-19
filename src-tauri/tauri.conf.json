@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "xbot-tools-app",
+  "version": "0.1.0",
+  "identifier": "com.xbot-tools-app.app",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "tools",
+        "width": 400,
+        "height": 300,
+        "url": "/",
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "createUpdaterArtifacts": true,
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://mirror.ghproxy.com/https://github.com/yexiyue/Comfyui-Startup/releases/download/updater/latest.json",
+        "https://github.com/yexiyue/Comfyui-Startup/releases/download/updater/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDk4MzhCRENCOUUyOEFCOQpSV1M1aXVLNTNJdURDZmozVlE3VDk5bjJ6QXZhRUZiUnZKSDFxSjI5amtGN0NRYnZkb1RYaE12Vwo="
+    }
+  }
+}

@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { Switch, Card, message } from 'antd';
-import { appWindow } from '@tauri-apps/api/window';
 import { isEnabled, enable, disable } from '@tauri-apps/plugin-autostart';
 
 const SettingPage: React.FC = () => {
